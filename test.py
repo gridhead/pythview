@@ -14,8 +14,11 @@ def remove_duplicates(input: list) -> list:
     Returns:
         List without duplicates.
     """
-    no_dup_dict = dict.fromkeys(input)
-    return no_dup_dct
+    no_dup_list = []
+    for indx in input:
+        if indx not in no_dup_list:
+            no_dup_list.append(indx)
+    return no_dup_list
 
 
 def sort_list(input: list) -> list:
@@ -30,6 +33,7 @@ def sort_list(input: list) -> list:
     Returns:
         Sorted list.
     """
+    input.sort()
     return input
 
 
